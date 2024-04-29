@@ -1,3 +1,9 @@
+/*
+    Create store for collect state and value of application
+    Reducer is a tools for copy and replace whole data with 
+    new updated data in client-side storage)
+*/
+
 'use client'; // Tell nextjs to use client-side
 
 import { configureStore } from "@reduxjs/toolkit";
