@@ -1,7 +1,7 @@
 'use client';
 import type { RootState } from "./redux/store";
 import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement, incrementByAmount } from "./redux/features/counter/counterSlice";
+import { increment, decrement, incrementByAmount, decrementByAmount } from "./redux/features/counter/counterSlice";
 
 export default function Home() {
   const count = useSelector((state: RootState) => state.counter.value);
@@ -18,6 +18,9 @@ export default function Home() {
         </button> 
         <button className=" bg-teal-500 rounded-full p-2" onClick={() => dispatch(incrementByAmount(2))}>
         Increment by 2
+        </button>
+        <button className=" bg-cyan-500 rounded-full p-2" onClick={() => dispatch(decrementByAmount(2))}>
+        Decrement by 2
         </button> 
     </main>
   );
